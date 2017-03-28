@@ -1,0 +1,75 @@
+//
+//  PuYang.pch
+//  PYLine
+//
+//  Created by zpy-pc on 17/3/28.
+//  Copyright © 2017年 puyang. All rights reserved.
+//
+
+#ifndef PuYang_pch
+#define PuYang_pch
+
+/*-----------------------------------------
+ * $(SRCROOT)/$(PROJECT_NAME)/PuYang.pch *
+ -----------------------------------------*/
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+
+#endif
+
+#ifdef __OBJC__
+
+/* Add your header file here. */
+//#import "SimpleNSLog.h"
+//#import "CreateModel.h"
+//#import "NSArray+JSONData.h"
+//#import "NSDictionary+JSONData.h"
+//#import "NSData+JSONData.h"
+//#import "ModelCreate.h"
+//#import "RCStatHelper.h"
+//#import "NSString+Useful.h"
+//#import "DefaultTextLabel.h"
+//#import "UIColor+AppColor.h"
+//#import "GCD.h"
+//#import "UIView+SthUseful.h"
+//#import "WxHxD.h"
+#import "UIView+SetRect.h"
+#import "NSString+HexColors.h"
+#import "UIFont+Fonts.h"
+#import "NumberFormatter.h"
+//#import "CustomCell.h"
+//#import "CellDataAdapter.h"
+//#import "UserInfomation.h"
+//#import "NSString+LabelWidthAndHeight.h"
+//#import "ZPYInsideRefreshHeader.h"
+//#import "ZPYLoadingView.h"
+//#import "GlobalConfig.h"
+#define ScreenHeightRate ([[UIScreen mainScreen] bounds].size.height / 667.0)  //6 plus 736  6s/6 667  5s 568
+#define ScreenWidthRate ([UIScreen mainScreen].bounds.size.width / 375.0)
+
+
+#define ZPY_INSERT_ROWS_DELAY_SECS (0.3)
+
+#define LABEL_DEFAULT_TEXT   @"--"
+
+static inline float screenHeightRate() {
+    
+    CGFloat width = [UIScreen mainScreen].bounds.size.height;
+    
+    return width / 667.0;
+}
+
+static inline float screenWidthRate() {
+    
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    
+    return width / 375.0;
+}
+
+#endif
+
+#endif /* PuYang_pch */
